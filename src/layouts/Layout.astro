@@ -1,3 +1,10 @@
+---
+import '../styles/light.css'
+import NavigationComponent from '../components/Navigation.astro'
+
+const pageTitle = 'Retrograde Mercury';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,9 +13,10 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
+		<NavigationComponent />
 		<slot />
 	</body>
 </html>

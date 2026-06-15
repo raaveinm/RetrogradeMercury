@@ -1,0 +1,46 @@
+---
+class TeamMember {
+    name: string;
+    role: string;
+    link: string;
+
+    constructor(name: string, role: string, link: string) {
+        this.name = name;
+        this.role = role;
+        this.link = link;
+        Object.freeze(this);
+    }
+}
+const teamMembers = [
+    new TeamMember(
+        "Kirill \"Raaveinm\"",
+        "Team lead, Software Engineer",
+        "https://github.com/raaveinm/",
+    ),
+    new TeamMember(
+        "Akisha",
+        "Technical Designer",
+        "https://github.com/IAkishaI"
+    ),
+    new TeamMember(
+        "Kirsegisan",
+        "3D & Animations",
+        "https://github.com/Kirsegisan"
+    )
+];
+---
+
+<div id="container">
+    <header id="seeker"></header>
+    <main>
+        <section>
+            <h1>The Seeker</h1>
+            <div id="description">UE 5.7 game</div>
+            <ul>
+                {teamMembers.map((member) => (
+                    <li><a href={member.link}>{member.name} - {member.role}</a></li>
+                ))}
+            </ul>
+        </section>
+    </main>
+</div>
